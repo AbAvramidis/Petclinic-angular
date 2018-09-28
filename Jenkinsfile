@@ -4,7 +4,7 @@ import jenkins.model.*
 
 pipeline {
     agent any
-    tool name: 'mynode', type: 'nodejs'
+    
     
     stages {
         stage ('SCM'){
@@ -13,12 +13,6 @@ pipeline {
             }
         }
         
-        stage ('Compile'){
-            steps{
-                sh 'npm install -g @angular/cli@latest'
-                sh 'npm install'
-            }
-        }
        stage ('Build'){
            steps{ sh "sudo docker build -t abrams88/angular:latest ." }
        }
