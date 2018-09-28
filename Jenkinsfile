@@ -14,8 +14,12 @@ pipeline {
         }
         
        stage ('Build'){
-           steps{ sh "sudo docker build -t abrams88/angular:latest ." }
+           steps{ sh "sudo docker build -t marklightfoot96/angular:latest ." }
        }
+      
+      stage ('Push'){
+        steps{  sh 'sudo docker login -u marklightfoot96 -p StrongPassword && sudo docker push marklightfoot96/angular:latest'}
+      }
       
     }
 }
