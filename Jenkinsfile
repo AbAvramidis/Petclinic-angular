@@ -19,5 +19,10 @@ pipeline {
                 sh 'npm install'
             }
         }
+       stage ('Build'){
+           steps{ sh "sudo docker build -t abrams88/angular:latest ." }
+       }
+      
     }
 }
+
