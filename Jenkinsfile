@@ -4,7 +4,7 @@ import jenkins.model.*
 
 pipeline {
     agent any
-   
+    tool name: 'mynode', type: 'nodejs'
     
     stages {
         stage ('SCM'){
