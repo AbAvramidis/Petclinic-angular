@@ -1,6 +1,6 @@
 node{
   agent any
-  tools {nodejs "node"}
+  tools {nodejs "mynode"}
   
   stage('SCM Checkout'){
     git 'https://github.com/Abrams88/Petclinic-angular'
